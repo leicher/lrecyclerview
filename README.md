@@ -32,12 +32,12 @@ your activity write as this
 					}
 					}).layouts(layouts).binder(new LAdapter.TypeBinder<MultiTypeAdapter<String>>() {
 					@Override            
-					public void bind(MultiTypeAdapter<String> adapter, LHolder holder, int position, int viewType) {         
-					if (viewType == 1){
-								holder.setImage(R.id.img,R.mipmap.ic_launcher);
-							}else {
-								holder.setText(R.id.text,position + "");
-							}
+					public void bind(MultiTypeAdapter<String> adapter, LHolder holder, int position, int viewType) { 
+						if (viewType == 1){
+							holder.setImage(R.id.img,R.mipmap.ic_launcher);
+						}else {
+							holder.setText(R.id.text,position + "");
+						}
 					}
 				}));
 		recycler.setRefreshEnable(true);
